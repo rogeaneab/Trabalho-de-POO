@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3dfcb665-c08a-46e3-94a1-08a9ce5acc0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/controller/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/dto/request/ClienteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/dto/response/ClienteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/repository/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/service/ClienteServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/service/interfaces/IClienteCadastroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/service/interfaces/IClienteConsultaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/src/main/java/com/sistemavendas/vendas/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/VendasApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/VendasApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/controller/VendaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/controller/VendaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Produto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Venda.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/model/Venda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/repository/VendaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/repository/VendaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/CalculadoraComDesconto10.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/CalculadoraComDesconto10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/CalculadoraSemDesconto.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/CalculadoraSemDesconto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/CalculadoraVenda.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/CalculadoraVenda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/EstoqueServiceMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/EstoqueServiceMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/VendaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/VendaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/interfaces/IEstoqueService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/interfaces/IEstoqueService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/interfaces/IVendaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/classes/com/sistemavendas/vendas/service/interfaces/IVendaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/vendas/target/test-classes/com/sistemavendas/vendas/VendasApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/vendas/target/test-classes/com/sistemavendas/vendas/VendasApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="3FEujSmLYCLb3oWYe2J1FeLP2TO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Shell Script.mvnw.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/vituu/Área de trabalho/Repo/Trabalho-de-POO"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3dfcb665-c08a-46e3-94a1-08a9ce5acc0b" name="Changes" comment="" />
+      <created>1781652685704</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781652685704</updated>
+    </task>
+    <servers />
+  </component>
+</project>
