@@ -2,8 +2,7 @@ package com.sistemavendas.vendas.service;
 
 import com.sistemavendas.vendas.service.interfaces.IEstoqueService;
 import org.springframework.stereotype.Service;
-
-@Service // Isso avisa ao Spring que esse componente existe e resolve o erro de inicialização!
+//@Service // Isso avisa ao Spring que esse componente existe e resolve o erro de inicialização!"
 public class EstoqueServiceMock implements IEstoqueService {
     
     @Override

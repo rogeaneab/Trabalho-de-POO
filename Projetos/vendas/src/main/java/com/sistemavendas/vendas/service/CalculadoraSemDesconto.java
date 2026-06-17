@@ -1,11 +1,11 @@
 package com.sistemavendas.vendas.service;
 
 import com.sistemavendas.vendas.model.Item;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component; // Verifique se tem esse import
 import java.math.BigDecimal;
 import java.util.List;
 
-@Component("semDesconto")
+@Component("semDesconto") // <-- ESSA LINHA É OBRIGATÓRIA
 public class CalculadoraSemDesconto implements CalculadoraVenda {
     @Override
     public BigDecimal calcularTotal(List<Item> itens) {
