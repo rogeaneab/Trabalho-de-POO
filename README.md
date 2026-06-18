@@ -139,6 +139,7 @@ spring.h2.console.path=/h2-console
 ## 🗃️ Tecnologias Utilizadas
 
 - **Java 17**
+- **IntelliJ**
 - **Spring Boot 3.x**
 - **Spring Data JPA / Hibernate**
 - **Banco H2 (em memória)**
