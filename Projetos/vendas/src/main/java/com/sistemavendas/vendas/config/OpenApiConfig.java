@@ -2,7 +2,7 @@ package com.sistemavendas.vendas.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.Contact;
+//import io.swagger.v3.oas.models.info.Contact;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,8 +16,6 @@ public class OpenApiConfig {
                         .title("API de Vendas - Trabalho de POO")
                         .version("1.0.0")
                         .description("API REST para gerenciamento de clientes, produtos, estoque e vendas. Trabalho desenvolvido por Emanuel Carvalho Belarmino.")
-                        .contact(new Contact()
-                                .name("Emanuel Carvalho Belarmino")
-                                .email("emanuel.belarmino@example.com")));
+                        );
     }
 }

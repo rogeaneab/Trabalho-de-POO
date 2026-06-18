@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/vendas")
 @RequiredArgsConstructor
-@Tag(name = "Vendas", description = "Endpoints para registro e consulta de vendas (Módulo Rogeane / Emanuel)")
+@Tag(name = "Vendas", description = "Endpoints para registro e consulta de vendas")
 public class VendaController {
 
     private final IVendaService vendaService;

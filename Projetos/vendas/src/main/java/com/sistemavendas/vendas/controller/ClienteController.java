@@ -21,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/clientes")
 @RequiredArgsConstructor
-@Tag(name = "Clientes", description = "Endpoints para gestão de clientes (Módulo VH)")
+@Tag(name = "Clientes", description = "Endpoints para gestão de clientes")
 public class ClienteController {
 
     private final IClienteCadastroService cadastroService;

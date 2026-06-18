@@ -23,7 +23,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/produtos")
 @RequiredArgsConstructor
-@Tag(name = "Produtos", description = "Endpoints para gestão de produtos (Módulo Miguel)")
+@Tag(name = "Produtos", description = "Endpoints para gestão de produtos")
 public class ProdutoController {
 
     private final IProdutoCadastroService cadastroService;

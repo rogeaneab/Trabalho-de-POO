@@ -21,7 +21,7 @@ public class Venda {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "venda_id")
-    private List<Item> itens; // Se mudou acima para ItemVenda, mude aqui também
+    private List<Item> itens;
 
     private BigDecimal valorTotal;
     private LocalDateTime dataVenda;

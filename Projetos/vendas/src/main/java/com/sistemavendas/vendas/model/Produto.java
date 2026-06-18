@@ -28,5 +28,5 @@ public class Produto {
     private String categoria;
 
     @Column(nullable = false)
-    private Integer quantidadeEstoque; // Armazenamento do saldo atual
+    private Integer quantidadeEstoque;
 }
