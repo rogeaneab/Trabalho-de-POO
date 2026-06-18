@@ -30,6 +30,9 @@ cd Trabalho-de-POO/Projetos/vendas
 
 # Ou, no Windows
 mvnw.cmd spring-boot:run
+
+# Observação
+Certifique-se que está dentro da pasta "vendas", executando "cd Projetos/vendas"
 ```
 
 ### Executando pelo IntelliJ IDEA
