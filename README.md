@@ -278,7 +278,7 @@ src/main/java/com/sistemavendas/vendas/
 
 ---
 
-## 📝 Decisões de Design
+## 📝 Decisões do projeto
 
 - **Estoque como atributo de Produto:** ao invés de criar uma entidade `Estoque` e um `EstoqueController` separados, optou-se por manter `quantidadeEstoque` como atributo direto da entidade `Produto`. Essa decisão simplifica o modelo de dados, já que, nas regras de negócio definidas, cada produto possui exatamente um saldo de estoque (relação 1:1 trivial), eliminando a necessidade de uma tabela e endpoints adicionais apenas para repassar o mesmo dado.
 - **`IEstoqueService` implementada por `ProdutoServiceImpl`:** a interface foi mantida separada (ISP) mesmo sem um controller próprio, pois sua responsabilidade (decrementar saldo) é estritamente diferente de cadastro/consulta de produtos. Isso permite, inclusive, trocar a implementação real por um mock (`EstoqueServiceMock`, atualmente desativado) em cenários de teste, sem alterar `VendaServiceImpl` — demonstrando LSP e DIP na prática.
