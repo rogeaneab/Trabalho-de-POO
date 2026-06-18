@@ -1,0 +1,32 @@
+# Target compilation folders
+**/target/
+*.class
+
+# Log files
+*.log
+
+# IDE files (IntelliJ IDEA)
+.idea/
+*.iml
+*.iws
+out/
+/out/
+
+# User-specific stuff
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionary.xml
+.idea/shelf/
+.idea/datasources/
+.idea/datasources.ids
+.idea/datasources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/dbnavigator.xml
+
+# Avoid tracking temporary files or OS metadata
+.DS_Store
+Thumbs.db

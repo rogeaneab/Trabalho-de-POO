@@ -113,6 +113,29 @@ Módulos de alto nível dependem de abstrações, não de implementações:
 | **Miguel Pereira de Sousa Neto** | Módulo de Produtos e Controle de Estoque — implementação dos endpoints de produtos (CRUD completo), gerenciamento do estoque com criação automática ao cadastrar produto, validação de estoque não negativo e decremento automático na venda. |
 | **Emanuel Carvalho Belarmino** | Tratamento de erros, documentação e gestão do repositório — implementação do `GlobalExceptionHandler`, exceções customizadas (`EstoqueInsuficienteException`, `RecursoNaoEncontradoException`), configuração do Swagger UI via Springdoc OpenAPI, elaboração do README e organização do repositório Git. |
 
+---
+
+## ⚙️ Configuração — application.properties
+
+```properties
+# Banco de dados H2 em memória
+spring.datasource.url=jdbc:h2:mem:vendas_db
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# JPA / Hibernate
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+
+# Console H2 (desenvolvimento)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+```
+
+---
+
 ## 🗃️ Tecnologias Utilizadas
 
 - **Java 17**

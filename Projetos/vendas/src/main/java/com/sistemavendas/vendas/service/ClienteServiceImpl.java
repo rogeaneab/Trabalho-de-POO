@@ -2,6 +2,7 @@ package com.sistemavendas.vendas.service;
 
 import com.sistemavendas.vendas.dto.request.ClienteRequest;
 import com.sistemavendas.vendas.dto.response.ClienteResponse;
+import com.sistemavendas.vendas.exception.RecursoNaoEncontradoException;
 import com.sistemavendas.vendas.model.Cliente;
 import com.sistemavendas.vendas.repository.ClienteRepository;
 import com.sistemavendas.vendas.service.interfaces.IClienteCadastroService;
@@ -44,7 +45,7 @@ public class ClienteServiceImpl implements IClienteCadastroService, IClienteCons
     @Transactional
     public ClienteResponse atualizar(Long id, ClienteRequest request) {
         Cliente cliente = clienteRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Cliente não encontrado com ID: " + id));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Cliente não encontrado com ID: " + id));
 
         cliente.setNome(request.getNome());
         cliente.setEmail(request.getEmail());
@@ -59,7 +60,7 @@ public class ClienteServiceImpl implements IClienteCadastroService, IClienteCons
     @Transactional
     public void remover(Long id) {
         if (!clienteRepository.existsById(id)) {
-            throw new RuntimeException("Cliente não encontrado com ID: " + id);
+            throw new RecursoNaoEncontradoException("Cliente não encontrado com ID: " + id);
         }
         clienteRepository.deleteById(id);
     }
@@ -76,7 +77,7 @@ public class ClienteServiceImpl implements IClienteCadastroService, IClienteCons
     @Transactional(readOnly = true)
     public ClienteResponse buscarPorId(Long id) {
         Cliente cliente = clienteRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Cliente não encontrado com ID: " + id));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Cliente não encontrado com ID: " + id));
         return mapToResponse(cliente);
     }
 

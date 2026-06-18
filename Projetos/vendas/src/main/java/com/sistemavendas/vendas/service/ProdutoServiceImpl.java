@@ -2,6 +2,8 @@ package com.sistemavendas.vendas.service;
 
 import com.sistemavendas.vendas.dto.request.ProdutoRequest;
 import com.sistemavendas.vendas.dto.response.ProdutoResponse;
+import com.sistemavendas.vendas.exception.EstoqueInsuficienteException;
+import com.sistemavendas.vendas.exception.RecursoNaoEncontradoException;
 import com.sistemavendas.vendas.model.Produto;
 import com.sistemavendas.vendas.repository.ProdutoRepository;
 import com.sistemavendas.vendas.service.interfaces.IProdutoCadastroService;
@@ -43,7 +45,7 @@ public class ProdutoServiceImpl implements IProdutoCadastroService, IProdutoCons
     @Transactional
     public ProdutoResponse atualizar(Long id, ProdutoRequest request) {
         Produto produto = produtoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Produto não encontrado com ID: " + id));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Produto não encontrado com ID: " + id));
 
         produto.setNome(request.getNome());
         produto.setPreco(request.getPreco());
@@ -65,7 +67,7 @@ public class ProdutoServiceImpl implements IProdutoCadastroService, IProdutoCons
     @Transactional
     public void remover(Long id) {
         if (!produtoRepository.existsById(id)) {
-            throw new RuntimeException("Produto não encontrado com ID: " + id);
+            throw new RecursoNaoEncontradoException("Produto não encontrado com ID: " + id);
         }
         produtoRepository.deleteById(id);
     }
@@ -82,7 +84,7 @@ public class ProdutoServiceImpl implements IProdutoCadastroService, IProdutoCons
     @Transactional(readOnly = true)
     public ProdutoResponse buscarPorId(Long id) {
         Produto produto = produtoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Produto não encontrado com ID: " + id));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Produto não encontrado com ID: " + id));
         return mapToResponse(produto);
     }
 
@@ -94,13 +96,13 @@ public class ProdutoServiceImpl implements IProdutoCadastroService, IProdutoCons
     @Transactional
     public void decrementarEstoque(Long produtoId, Integer quantidade) {
         Produto produto = produtoRepository.findById(produtoId)
-                .orElseThrow(() -> new RuntimeException("Produto ID " + produtoId + " não existe no estoque."));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Produto ID " + produtoId + " não existe no estoque."));
 
         int novoEstoque = produto.getQuantidadeEstoque() - quantidade;
 
         // Validação crucial de estoque não negativo
         if (novoEstoque < 0) {
-            throw new IllegalArgumentException("Saldo insuficiente em estoque para o produto: " + produto.getNome()
+            throw new EstoqueInsuficienteException("Saldo insuficiente em estoque para o produto: " + produto.getNome()
                     + " (Disponível: " + produto.getQuantidadeEstoque() + ", Solicitado: " + quantidade + ")");
         }
 

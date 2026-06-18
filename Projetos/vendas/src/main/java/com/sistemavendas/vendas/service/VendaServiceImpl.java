@@ -1,5 +1,6 @@
 package com.sistemavendas.vendas.service;
 
+import com.sistemavendas.vendas.exception.RecursoNaoEncontradoException;
 import com.sistemavendas.vendas.model.Venda;
 import com.sistemavendas.vendas.model.Item;
 import com.sistemavendas.vendas.repository.VendaRepository;
@@ -47,7 +48,7 @@ public class VendaServiceImpl implements IVendaService {
     @Override
     public Venda buscarPorId(Long id) {
         return vendaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Venda não encontrada."));
+                .orElseThrow(() -> new RecursoNaoEncontradoException("Venda não encontrada com ID: " + id));
     }
 
     @Override
